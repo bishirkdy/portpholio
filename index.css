@@ -414,17 +414,32 @@ body {
   }
   .navbar ul {
     display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 50%;
+    background: black;
+    color: wheat;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid wheat;
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease;
+  }
+
+  .navbar ul.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
   .navbar .fa-bars-staggered {
     display: block;
     font-size: 24px;
   }
-  .navbar .fa-bars-staggered:active {
-    .navbar ul {
-      display: block;
-      z-index: 200;
-    }
-  }
+
   /* header */
   .header {
     flex-direction: column-reverse;
@@ -608,9 +623,8 @@ body {
     width: 350px;
     height: 350px;
   }
-   .bar {
+  .bar {
     padding: 20px 50px;
-    
   }
   .about {
     padding: 0 50px;
